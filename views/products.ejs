@@ -1,0 +1,24 @@
+<%- include("partials/header"); -%>
+
+<div class="container mt-3">
+    <h1>Products</h1>
+    <div class="row">
+        <%  bikes.forEach(function(bike){ %>
+        <div class="col-lg-4 d-flex align-items-stretch mb-3">
+            <div class="card" style="width: 18rem;">
+                <img src="<%=bike.url%>" class="card-img-top" alt="bike-img">
+                <div class="card-body">
+                    <h5 class="card-title"><%=bike.model%></h5>
+                    <p class="card-text">Type:<%=bike.type%> "<br>Manufacturer:<%=bike.manufacturer%><br>Price:<%=bike.price%> euros</p>
+                    
+                </div>
+            </div>  
+        </div>
+        
+        <% }) %>
+    </div>
+    
+</div>
+
+
+<%- include("partials/footer"); -%>
